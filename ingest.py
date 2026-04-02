@@ -8,8 +8,8 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
 
-PDF_FOLDER = "./papers"
-FAISS_INDEX_PATH = "./faiss_index"
+PDF_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), "papers")
+FAISS_INDEX_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "faiss_index")
 EMBEDDING_MODEL = "text-embedding-3-small"
 CHUNK_SIZE      = 500
 CHUNK_OVERLAP   = 50
